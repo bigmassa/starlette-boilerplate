@@ -12,3 +12,7 @@ git+https://github.com/bigmassa/starlette-core.git@master#egg=starlette-core
 # other..
 sentry-sdk
 wtforms-alchemy
+
+# api
+fastapi
+pyjwt
