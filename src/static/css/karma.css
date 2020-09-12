@@ -2,48 +2,45 @@
 /* karma-css */
 /* variables */
 /* karma-css core */
-/*! Karma-CSS v1.9.7 MIT License | http://karmacss.com | https://github.com/accentdesign/karma-css */
+/*! Karma-CSS v2.0.0 MIT License | http://karmacss.com | https://github.com/accentdesign/karma-css */
 .container {
-  padding-right: 15px;
-  padding-left: 15px;
+  width: 100%;
   margin-right: auto;
   margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 @media (min-width: 576px) {
   .container {
-    width: 540px;
-    max-width: 100%;
+    max-width: 540px;
   }
 }
 
 @media (min-width: 768px) {
   .container {
-    width: 720px;
-    max-width: 100%;
+    max-width: 720px;
   }
 }
 
 @media (min-width: 992px) {
   .container {
-    width: 960px;
-    max-width: 100%;
+    max-width: 960px;
   }
 }
 
 @media (min-width: 1200px) {
   .container {
-    width: 1140px;
-    max-width: 100%;
+    max-width: 1140px;
   }
 }
 
 .container-fluid {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .row {
@@ -72,8 +69,8 @@
 .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg,
 .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl,
 .col-xl-auto {
+  position: relative;
   width: 100%;
-  min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
 }
@@ -90,7 +87,7 @@
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   width: auto;
-  max-width: none;
+  max-width: 100%;
 }
 
 .col-1 {
@@ -281,7 +278,7 @@
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
     width: auto;
-    max-width: none;
+    max-width: 100%;
   }
   .col-sm-1 {
     -ms-flex: 0 0 8.333333%;
@@ -438,7 +435,7 @@
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
     width: auto;
-    max-width: none;
+    max-width: 100%;
   }
   .col-md-1 {
     -ms-flex: 0 0 8.333333%;
@@ -595,7 +592,7 @@
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
     width: auto;
-    max-width: none;
+    max-width: 100%;
   }
   .col-lg-1 {
     -ms-flex: 0 0 8.333333%;
@@ -752,7 +749,7 @@
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
     width: auto;
-    max-width: none;
+    max-width: 100%;
   }
   .col-xl-1 {
     -ms-flex: 0 0 8.333333%;
@@ -899,8 +896,8 @@
 
 * {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 *::before, *::after {
@@ -910,13 +907,17 @@
 html {
   font-size: 62.5%;
   line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 15px;
-  font-weight: 400;
   color: #666666;
+  font-weight: 400;
+  font-size: 15px;
+  font-family: "Source Sans Pro", sans-serif;
   background: white;
 }
 
@@ -928,7 +929,7 @@ a {
   color: #1aa2dc;
   text-decoration: none;
   background-color: transparent;
-  transition: color linear 250ms;
+  transition: color linear 0.18s;
 }
 
 a:hover {
@@ -949,27 +950,27 @@ button,
 }
 
 .button {
-  box-sizing: border-box;
   display: inline-block;
+  box-sizing: border-box;
   padding: 0.8rem 1rem;
   overflow: visible;
-  font-family: inherit;
-  font-size: 1.5rem;
-  font-weight: 400;
-  line-height: 1.5;
   color: #666666;
+  font-weight: 400;
+  font-size: 1.5rem;
+  font-family: inherit;
+  line-height: 1.5;
+  white-space: nowrap;
   text-align: center;
   text-decoration: none;
-  white-space: nowrap;
+  background-color: white;
+  border: 1px solid #e6e6e6;
+  border-radius: 0.25rem;
   cursor: pointer;
+  transition: background-color linear 0.18s, border-color linear 0.18s;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  background-color: white;
-  border: 1px solid #e6e6e6;
-  border-radius: 0.25rem;
-  transition: background-color linear 250ms, border-color linear 250ms;
 }
 
 .button:hover, .button:focus {
@@ -981,7 +982,7 @@ button,
 
 .button.button-outline {
   background-color: transparent;
-  transition: background-color linear 250ms, border-color linear 250ms, color linear 250ms;
+  transition: background-color linear 0.18s, border-color linear 0.18s, color linear 0.18s;
 }
 
 .button.button-outline:hover, .button.button-outline:focus {
@@ -994,7 +995,7 @@ button,
 .button.button-clear {
   background-color: transparent;
   border-color: transparent;
-  transition: background-color linear 250ms, border-color linear 250ms, color linear 250ms;
+  transition: background-color linear 0.18s, border-color linear 0.18s, color linear 0.18s;
 }
 
 .button.button-clear:hover, .button.button-clear:focus {
@@ -1091,8 +1092,8 @@ samp {
 
 code {
   padding: 0.2rem 0.5rem;
-  font-size: 100%;
   color: #666666;
+  font-size: 100%;
   word-break: break-word;
   background: #f0f0f0;
   border: 1px solid #e6e6e6;
@@ -1101,11 +1102,11 @@ code {
 
 pre {
   display: block;
-  padding: 1rem 1.5rem;
   margin-bottom: 1.5rem;
+  padding: 1rem 1.5rem;
   overflow-x: auto;
-  font-size: 90%;
   color: #666666;
+  font-size: 90%;
   white-space: pre;
   background: #f0f0f0;
   border: 1px solid #e6e6e6;
@@ -1113,8 +1114,8 @@ pre {
 }
 
 pre code {
-  font-size: inherit;
   color: inherit;
+  font-size: inherit;
   word-break: normal;
 }
 
@@ -1129,14 +1130,14 @@ form {
 input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], input[type="week"] {
   box-sizing: border-box;
   margin-bottom: 1.5rem;
+  color: #666666;
   font-family: inherit;
   line-height: 1.5;
-  color: #666666;
   background: white;
   border: 1px solid #e6e6e6;
   border-radius: 0.25rem;
   box-shadow: none;
-  transition: background linear 250ms, border-color linear 250ms;
+  transition: background linear 0.18s, border-color linear 0.18s;
   padding: 0.8rem 1rem;
   font-size: 1.5rem;
   max-width: 100%;
@@ -1151,8 +1152,8 @@ input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-loc
 }
 
 input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"] {
-  -webkit-appearance: listbox;
   height: calc(3.85rem + 2px);
+  -webkit-appearance: listbox;
 }
 
 input[type="checkbox"], input[type="radio"] {
@@ -1165,8 +1166,8 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 ::-webkit-datetime-edit-fields-wrapper {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 ::-webkit-input-placeholder {
@@ -1197,20 +1198,20 @@ input[type="checkbox"], input[type="radio"] {
 textarea {
   box-sizing: border-box;
   margin-bottom: 1.5rem;
+  color: #666666;
   font-family: inherit;
   line-height: 1.5;
-  color: #666666;
   background: white;
   border: 1px solid #e6e6e6;
   border-radius: 0.25rem;
   box-shadow: none;
-  transition: background linear 250ms, border-color linear 250ms;
+  transition: background linear 0.18s, border-color linear 0.18s;
   padding: 0.8rem 1rem;
   font-size: 1.5rem;
   max-width: 100%;
   width: 100%;
-  -webkit-appearance: none;
   overflow: auto;
+  -webkit-appearance: none;
 }
 
 textarea:focus {
@@ -1222,14 +1223,14 @@ textarea:focus {
 select {
   box-sizing: border-box;
   margin-bottom: 1.5rem;
+  color: #666666;
   font-family: inherit;
   line-height: 1.5;
-  color: #666666;
   background: white;
   border: 1px solid #e6e6e6;
   border-radius: 0.25rem;
   box-shadow: none;
-  transition: background linear 250ms, border-color linear 250ms;
+  transition: background linear 0.18s, border-color linear 0.18s;
   padding: 0.8rem 1rem;
   font-size: 1.5rem;
   max-width: 100%;
@@ -1249,17 +1250,17 @@ select:not([multiple]) {
 
 label {
   display: block;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   font-weight: 600;
 }
 
 legend {
-  box-sizing: border-box;
   display: block;
+  box-sizing: border-box;
   max-width: 100%;
-  margin-bottom: .5rem;
-  font-weight: 600;
+  margin-bottom: 0.5rem;
   color: inherit;
+  font-weight: 600;
   white-space: normal;
 }
 
@@ -1291,20 +1292,20 @@ figure {
 }
 
 ul {
-  padding-left: 0;
   margin-bottom: 1.5rem;
+  padding-left: 0;
   list-style: circle inside;
+}
+
+ol {
+  margin-bottom: 1.5rem;
+  padding-left: 0;
+  list-style: decimal inside;
 }
 
 ul ul,
 ul ol {
   margin: 0 0 0 2rem;
-}
-
-ol {
-  padding-left: 0;
-  margin-bottom: 1.5rem;
-  list-style: decimal inside;
 }
 
 ol ol,
@@ -1330,9 +1331,9 @@ table {
   max-width: 100%;
   margin-bottom: 1.5rem;
   font-size: 90%;
-  border-spacing: 0;
-  border-collapse: collapse;
   background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 caption {
@@ -1378,8 +1379,8 @@ h1,
 .h4, h5,
 .h5, h6,
 .h6 {
-  font-family: "Source Sans Pro", sans-serif;
   color: #666666;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 h1 small, .h1 small, h2 small, .h2 small, h3 small, .h3 small, h4 small, .h4 small, h5 small, .h5 small, h6 small, .h6 small {
@@ -1390,48 +1391,48 @@ h1 small, .h1 small, h2 small, .h2 small, h3 small, .h3 small, h4 small, .h4 sma
 h1,
 .h1 {
   margin: 0 0 1.5rem;
-  font-size: 30px;
   font-weight: 400;
+  font-size: 30px;
   line-height: 1.2;
 }
 
 h2,
 .h2 {
   margin: 0 0 1.5rem;
-  font-size: 22.5px;
   font-weight: 400;
+  font-size: 22.5px;
   line-height: 1.25;
 }
 
 h3,
 .h3 {
   margin: 0 0 1.5rem;
-  font-size: 17.55px;
   font-weight: 400;
+  font-size: 17.55px;
   line-height: 1.3;
 }
 
 h4,
 .h4 {
   margin: 0 0 1.5rem;
-  font-size: 15px;
   font-weight: 400;
+  font-size: 15px;
   line-height: 1.35;
 }
 
 h5,
 .h5 {
   margin: 0 0 1.5rem;
-  font-size: 12.45px;
   font-weight: 400;
+  font-size: 12.45px;
   line-height: 1.5;
 }
 
 h6,
 .h6 {
   margin: 0 0 1.5rem;
-  font-size: 10.05px;
   font-weight: 400;
+  font-size: 10.05px;
   line-height: 1.6;
 }
 
@@ -1445,8 +1446,8 @@ p {
 }
 
 blockquote {
-  padding: 1rem 1.5rem;
   margin-bottom: 1.5rem;
+  padding: 1rem 1.5rem;
   border-left: 3px solid #e6e6e6;
 }
 
@@ -1468,11 +1469,11 @@ sup {
 }
 
 sub {
-  bottom: -.25em;
+  bottom: -0.25em;
 }
 
 sup {
-  top: -.5em;
+  top: -0.5em;
 }
 
 /* add your custom modules here */
@@ -2047,6 +2048,7 @@ header a:hover {
   display: block;
 }
 
+[x-cloak],
 .d-hidden {
   display: none !important;
 }
@@ -2212,8 +2214,8 @@ header a:hover {
 }
 
 .list-style-reset {
-  padding: 0;
   margin: 0;
+  padding: 0;
   list-style: none !important;
 }
 
@@ -2348,6 +2350,10 @@ header a:hover {
 .flip-both {
   -webkit-transform: scale(-1, -1);
   transform: scale(-1, -1);
+}
+
+.preload-transitions * {
+  transition: none !important;
 }
 
 .hidden-xs-up {
